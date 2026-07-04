@@ -7,7 +7,7 @@
 // ============================================
 // 1. THREE.JS - 3D INTERACTIVE BACKGROUND
 // ============================================
-(function initHeroScene() {"
+(function initHeroScene() {
   const canvas = document.getElementById('heroCanvas');
   if (!canvas) return;
 
@@ -80,9 +80,9 @@
 
     const shearGroup = new THREE.Group();
     const blades = [];
-    const colors = [0x15803d, 0x854d0e, 0x64748b];
+    const customColors = [0x15803d, 0x854d0e, 0x64748b];
     for (let i = 0; i < 6; i++) {
-      const blade = createShearsBlade(colors[i % colors.length]);
+      const blade = createShearsBlade(customColors[i % customColors.length]);
       blade.position.set((Math.random() - 0.5) * 22, (Math.random() - 0.5) * 14, (Math.random() - 0.5) * 14 - 5);
       shearGroup.add(blade);
       blades.push({
